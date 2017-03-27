@@ -11,13 +11,14 @@ AC_CONFIG_LIBOBJ_DIR([src])
 AC_CONFIG_SRCDIR([src/hello.h])
 AC_CONFIG_HEADERS([config.h])
 
-AM_INIT_AUTOMAKE([-Wall -Werror foreign subdir-objects])
+AM_INIT_AUTOMAKE([-Wall foreign subdir-objects])
 
 # Checks for programs.
 AC_PROG_CC
 m4_pattern_allow([AM_PROG_AR])
 AM_PROG_AR
 LT_INIT
+LT_LANG([Windows Resource])
 
 AX_PLATFORM_DETECT
 
