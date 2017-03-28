@@ -38,6 +38,5 @@ AC_CHECK_FUNCS([usleep])
 AC_FUNC_MALLOC
 AC_FUNC_REALLOC
 
-AC_CONFIG_FILES([Makefile
-                 intl/Makefile])
+AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
