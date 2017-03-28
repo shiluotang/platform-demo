@@ -1,7 +1,7 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
-AC_PREREQ([2.69])
+AC_PREREQ([2.63])
 AC_INIT([platform-demo],[1.0],[shengquangang2015@163.com])
 
 AC_CONFIG_AUX_DIR([build-aux])
@@ -15,6 +15,7 @@ AM_INIT_AUTOMAKE([-Wall foreign subdir-objects])
 
 # Checks for programs.
 AC_PROG_CC
+AC_GNU_SOURCE
 m4_pattern_allow([AM_PROG_AR])
 AM_PROG_AR
 LT_INIT
@@ -31,9 +32,29 @@ AC_HEADER_TIME
 # Checks for typedefs, structures, and compiler characteristics.
 
 # Checks for library functions.
+AM_GNU_GETTEXT
+AM_GNU_GETTEXT_VERSION([0.18.3])
 AC_CHECK_FUNCS([usleep])
 AC_FUNC_MALLOC
 AC_FUNC_REALLOC
 
-AC_CONFIG_FILES([Makefile])
+AC_CONFIG_FILES([Makefile
+                 src/Makefile
+                 po/Makefile.in])
+
+#######################################################
+# Doxygen support
+#######################################################
+DX_DOXYGEN_FEATURE(ON)
+#DX_HTML_FEATURE(ON)
+#DX_CHM_FEATURE(OFF)
+#DX_CHI_FEATURE(OFF)
+#DX_MAN_FEATURE(OFF)
+#DX_RTF_FEATURE(OFF)
+#DX_XML_FEATURE(OFF)
+#DX_PDF_FEATURE(OFF)
+#DX_PS_FEATURE(OFF)
+DX_INIT_DOXYGEN([$PACKAGE_NAME],[Doxyfile],[doc])
+#######################################################
+
 AC_OUTPUT

@@ -1,0 +1,10 @@
+# List of source files which contain translatable strings.
+./tests/test2.c
+./tests/test1.c
+./src/main.c
+./src/win32/hello.c
+./src/mac/hello.c
+./src/arm/hello.c
+./src/realloc.c
+./src/linux/hello.c
+./src/malloc.c
