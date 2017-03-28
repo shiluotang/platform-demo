@@ -11,7 +11,7 @@ AC_CONFIG_LIBOBJ_DIR([src])
 AC_CONFIG_SRCDIR([src/hello.h])
 AC_CONFIG_HEADERS([config.h])
 
-AM_INIT_AUTOMAKE([-Wall foreign subdir-objects])
+AM_INIT_AUTOMAKE([-Wall -Werror foreign subdir-objects])
 
 # Checks for programs.
 AC_PROG_CC
@@ -32,7 +32,7 @@ AC_HEADER_TIME
 # Checks for typedefs, structures, and compiler characteristics.
 
 # Checks for library functions.
-AM_GNU_GETTEXT
+AM_GNU_GETTEXT([external])
 AM_GNU_GETTEXT_VERSION([0.18.3])
 AC_CHECK_FUNCS([usleep])
 AC_FUNC_MALLOC
