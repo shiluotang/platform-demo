@@ -1,6 +1,6 @@
 ACLOCAL_AMFLAGS = -I m4
 
-AM_CPPFLAGS = -Wall
+AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\" -Wall
 AM_CFLAGS	=
 AM_CXXFLAGS	=
 AM_LDFLAGS	=
@@ -42,4 +42,4 @@ test2_LDADD		= libhello.la
 
 TESTS = $(check_PROGRAMS)
 
-SUBDIRS = intl
+SUBDIRS = intl po
