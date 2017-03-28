@@ -4,6 +4,7 @@ AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\" -Wall
 AM_CFLAGS	=
 AM_CXXFLAGS	=
 AM_LDFLAGS	=
+LDADD		= @LTLIBINTL@
 
 if OS_WIN32
 SUFFIXES = .rc
@@ -26,7 +27,7 @@ endif
 
 noinst_PROGRAMS = demo
 demo_SOURCES = ./src/main.c
-demo_LDADD = libhello.la @LIBOBJS@ $(LIBINTL)
+demo_LDADD = libhello.la @LTLIBOBJS@ @LTLIBINTL@
 
 if OS_WIN32
 demo_SOURCES += ./src/demo.rc
