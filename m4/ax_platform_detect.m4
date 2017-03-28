@@ -35,4 +35,5 @@ case $host in
 esac
 AC_MSG_RESULT([$platform])
 AC_SUBST(platform)
+AM_CONDITIONAL([OS_WIN32], [test "x$platform" = "xwin32"])
 ])
