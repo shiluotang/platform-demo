@@ -26,12 +26,13 @@ endif
 
 noinst_PROGRAMS = demo
 demo_SOURCES = ./src/main.c
-demo_LDADD = libhello.la @LIBOBJS@
+demo_LDADD = libhello.la @LIBOBJS@ $(LIBINTL)
 
 if OS_WIN32
 demo_SOURCES += ./src/demo.rc
 endif
 
+# tests
 check_PROGRAMS	= test1 test2
 
 test1_SOURCES	= ./tests/test1.c
@@ -42,4 +43,8 @@ test2_LDADD		= libhello.la
 
 TESTS = $(check_PROGRAMS)
 
-SUBDIRS = intl po
+SUBDIRS = po src
+
+# doxygen
+include $(top_srcdir)/doxygen-automake.am
+EXTRA_DIST = Doxyfile
