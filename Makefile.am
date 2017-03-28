@@ -1,9 +1,10 @@
 ACLOCAL_AMFLAGS = -I m4
 
-AM_CPPFLAGS = -Wall
+AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\" -Wall
 AM_CFLAGS	=
 AM_CXXFLAGS	=
 AM_LDFLAGS	=
+LDADD		= @LTLIBINTL@
 
 if OS_WIN32
 SUFFIXES = .rc
@@ -26,12 +27,13 @@ endif
 
 noinst_PROGRAMS = demo
 demo_SOURCES = ./src/main.c
-demo_LDADD = libhello.la @LIBOBJS@
+demo_LDADD = libhello.la @LTLIBOBJS@ @LTLIBINTL@
 
 if OS_WIN32
 demo_SOURCES += ./src/demo.rc
 endif
 
+# tests
 check_PROGRAMS	= test1 test2
 
 test1_SOURCES	= ./tests/test1.c
@@ -42,4 +44,8 @@ test2_LDADD		= libhello.la
 
 TESTS = $(check_PROGRAMS)
 
-SUBDIRS = intl
+SUBDIRS = po src
+
+# doxygen
+include $(top_srcdir)/doxygen-automake.am
+EXTRA_DIST = Doxyfile
