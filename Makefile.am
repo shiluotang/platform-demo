@@ -7,6 +7,10 @@ AM_LDFLAGS	=
 LDADD		= @LTLIBINTL@
 
 if OS_WIN32
+AM_LDFLAGS += -no-undefined
+endif
+
+if OS_WIN32
 SUFFIXES = .rc
 RCCOMPILE = $(RC) $(DEF) $(DEFAULT_INCLUDES) $(INCLUDES) $(CPPFLAGS)
 LTRCCOMPILE = $(LIBTOOL) --mode=compile --tag=RC $(RCCOMPILE)
