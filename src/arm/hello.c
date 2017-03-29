@@ -11,5 +11,5 @@ void hello() {
     int *p = NULL;
     p = (int*) malloc(sizeof(*p));
     free(p);
-    printf("hello from arm\n");
+    printf(gettext("hello from arm\n"));
 }

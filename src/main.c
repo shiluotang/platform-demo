@@ -2,6 +2,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <locale.h>
 
 #ifdef HAVE_CONFIG_H
 #   include <config.h>
@@ -42,14 +43,19 @@
 int main(int argc, char* *argv) {
     time_t rawtime;
     struct tm *tt;
+#ifdef ENABLE_NLS
+    setlocale(LC_ALL, "");
+    bindtextdomain(PACKAGE, LOCALEDIR);
+    textdomain(PACKAGE);
+#endif
 
     hello();
 
-    printf("Never stop\n");
+    printf(gettext("Never stop\n"));
 #ifdef HAVE_USLEEP
     usleep(1 * 1000 * 1000);
 #else
-    printf("Warning `usleep' is not supported on this platform!\n");
+    printf(gettext("Warning `usleep' is not supported on this platform!\n"));
 #endif
     time(&rawtime);
     tt = localtime(&rawtime);

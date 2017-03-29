@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: platform-demo 1.0\n"
+"Report-Msgid-Bugs-To: shengquangang2015@163.com\n"
+"POT-Creation-Date: 2017-03-29 15:03+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/main.c:54
+#, c-format
+msgid "Never stop\n"
+msgstr ""
+
+#: src/main.c:58
+#, c-format
+msgid "Warning `usleep' is not supported on this platform!\n"
+msgstr ""
+
+#: src/win32/hello.c:14
+#, c-format
+msgid "hello from win32\n"
+msgstr ""
+
+#: src/mac/hello.c:14
+#, c-format
+msgid "hello from mac\n"
+msgstr ""
+
+#: src/arm/hello.c:14
+#, c-format
+msgid "hello from arm\n"
+msgstr ""
+
+#: src/linux/hello.c:14
+#, c-format
+msgid "hello from linux\n"
+msgstr ""

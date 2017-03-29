@@ -1,0 +1,47 @@
+# Chinese translations for platform-demo package.
+# Copyright (C) 2017 Free Software Foundation, Inc.
+# This file is distributed under the same license as the platform-demo package.
+# samuel <shengquangang2015@163.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: platform-demo 1.0\n"
+"Report-Msgid-Bugs-To: shengquangang2015@163.com\n"
+"POT-Creation-Date: 2017-03-29 15:03+0800\n"
+"PO-Revision-Date: 2017-03-29 14:44+0800\n"
+"Last-Translator: samuel <shengquangang2015@163.com>\n"
+"Language-Team: Chinese (simplified)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/main.c:54
+#, c-format
+msgid "Never stop\n"
+msgstr "永远不会停下来\n"
+
+#: src/main.c:58
+#, c-format
+msgid "Warning `usleep' is not supported on this platform!\n"
+msgstr "警告 `usleep' 在这个平台上不被支持\n"
+
+#: src/win32/hello.c:14
+#, fuzzy, c-format
+msgid "hello from win32\n"
+msgstr "来自win32的问候\n"
+
+#: src/mac/hello.c:14
+#, fuzzy, c-format
+msgid "hello from mac\n"
+msgstr "来自mac的问候\n"
+
+#: src/arm/hello.c:14
+#, fuzzy, c-format
+msgid "hello from arm\n"
+msgstr "来自arm的问候\n"
+
+#: src/linux/hello.c:14
+#, c-format
+msgid "hello from linux\n"
+msgstr "来自linux的问候\n"
