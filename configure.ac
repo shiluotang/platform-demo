@@ -34,6 +34,7 @@ AC_HEADER_TIME
 # Checks for library functions.
 AM_GNU_GETTEXT([external])
 AM_GNU_GETTEXT_VERSION([0.18.3])
+AM_CONDITIONAL([USE_NLS], [test "x$USE_NLS" = "xyes"])
 AC_CHECK_FUNCS([usleep])
 AC_FUNC_MALLOC
 AC_FUNC_REALLOC
