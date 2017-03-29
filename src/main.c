@@ -40,6 +40,8 @@
 
 #endif
 
+#include "gettext.h"
+
 int main(int argc, char* *argv) {
     time_t rawtime;
     struct tm *tt;

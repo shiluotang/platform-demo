@@ -7,6 +7,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#include "../gettext.h"
+
 void hello() {
     int *p = NULL;
     p = (int*) malloc(sizeof(*p));
