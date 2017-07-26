@@ -51,6 +51,7 @@ test2_SOURCES	= ./tests/test2.c
 test2_LDADD		= libhello.la
 
 TESTS = $(check_PROGRAMS)
+TESTS += ./tests/script-test1.sh
 
 SUBDIRS = po src
 
