@@ -1,13 +1,12 @@
-#include "../hello.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 #ifdef HAVE_CONFIG_H
 #   include <config.h>
 #endif
 
-#include <stdlib.h>
-#include <stdio.h>
-
 #include "../gettext.h"
+#include "../hello.h"
 
 void hello() {
     int *p = NULL;

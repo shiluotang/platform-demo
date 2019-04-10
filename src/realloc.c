@@ -1,9 +1,9 @@
+#include <sys/types.h>
+
 #ifdef HAVE_CONFIG_H
 #   include <config.h>
 #endif
 #undef realloc
-
-#include <sys/types.h>
 
 void *realloc ();
 

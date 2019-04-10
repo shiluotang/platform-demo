@@ -1,5 +1,3 @@
-#include "hello.h"
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <locale.h>
@@ -41,6 +39,7 @@
 #endif
 
 #include "gettext.h"
+#include "hello.h"
 
 int main(int argc, char* *argv) {
     time_t rawtime;
