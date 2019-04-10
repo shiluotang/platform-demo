@@ -41,7 +41,8 @@ AC_FUNC_REALLOC
 
 AC_CONFIG_FILES([Makefile
                  src/Makefile
-                 po/Makefile.in])
+                 po/Makefile.in
+                 libhello.pc])
 
 #######################################################
 # Doxygen support

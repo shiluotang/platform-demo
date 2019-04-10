@@ -1,11 +1,11 @@
-#include "../src/hello.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 #ifdef HAVE_CONFIG_H
 #   include <config.h>
 #endif
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "../src/hello.h"
 
 int main(int argc, char* argv[]) {
     hello();
