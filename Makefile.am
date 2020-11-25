@@ -36,6 +36,7 @@ endif
 noinst_PROGRAMS = demo
 demo_SOURCES = ./src/main.c
 demo_LDADD = libhello.la @LTLIBOBJS@ @LTLIBINTL@
+demo_LDFLAGS = -static
 
 if OS_WIN32
 demo_SOURCES += ./src/demo.rc
@@ -57,4 +58,4 @@ SUBDIRS = po src
 
 # doxygen
 include $(top_srcdir)/doxygen-automake.am
-EXTRA_DIST = Doxyfile
+EXTRA_DIST = m4/ChangeLog  Doxyfile
